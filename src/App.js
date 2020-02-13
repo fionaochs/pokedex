@@ -7,12 +7,16 @@ import PokeList from './PokeList.js';
 class App extends Component {
   state = {
     selected: null,
-    pokedex: []
+    pokedex: [],
+    keyword: null
   }
   //initialize state with empty array for API
 
   handleChange = e => {
     this.setState({selected: e.target.value});
+  }
+  handleKeyword = e => {
+    this.setState({keyword: e.target.value});
   }
   async componentDidMount() {
     const data = await request.get('https://alchemy-pokedex.herokuapp.com/api/pokedex');
@@ -25,7 +29,8 @@ class App extends Component {
       return (
         <div className="App">
           <Header></Header>
-          <PokeList pokedex={this.state.pokedex} />
+          <input type="text" className="form" onChange={this.handleKeyword}></input>
+          <PokeList handleKeyword={this.state.keyword} pokedex={this.state.pokedex} />
         </div>
       );
   }
