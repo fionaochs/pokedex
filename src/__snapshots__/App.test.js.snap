@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App.js correctly 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <div>
+      <h1>
+        Gotta Catch Em All
+      </h1>
+    </div>
+  </header>
+  <section
+    className="options"
+  >
+    <section
+      className="list-section"
+    >
+      <ul
+        className="pokemons"
+      />
+    </section>
+  </section>
+</div>
+`;
