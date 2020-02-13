@@ -6,34 +6,44 @@ import PokeList from './PokeList.js';
 
 class App extends Component {
   state = {
-    selected: null,
     pokedex: [],
-    pokemon: null
+    pokemon: null,
+    searchInput: null
   }
   //initialize state with empty array for API
 
+  
   handleChange = e => {
-    this.setState({selected: e.target.value});
+    this.setState({searchInput: e.target.value});
   }
-  // handlepokemon = e => {
-  //   this.setState({pokemon: e.target.value});
-  // }
   async componentDidMount() {
     const data = await request.get('https://alchemy-pokedex.herokuapp.com/api/pokedex');
     this.setState({pokedex: data.body.results});
     //set data to API call
 }
+// handleSearchInput = async() => {
+//   let query = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
+//   query = this.state.searchInput ? query + '?pokemon=' + this.state.searchInput : query;
+//   const data = await request.get(query);
+//   this.setState({pokedex: data.body.results});
+// }
+handleSearchInput = async() => {
+  let query = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
+  query = this.state.searchInput ? query + '?pokemon=' + this.state.searchInput : query;
+  const data = await request.get(query);
+  this.setState({pokedex: data.body.results});
+}
   render() {
-    const pokemon = this.state.pokedex.filter(species => {
-      if (!this.state.selected) return true;
-      return species.type_1.includes(this.state.selected) || species.type_2.includes(this.state.selected) || species.pokemon.includes(this.state.selected);
-    })
+    // const pokemon = this.state.pokedex.filter(species => {
+    //   if (!this.state.searchInput) return true;
+    //   return species.type_1.includes(this.state.searchInput) || species.type_2.includes(this.state.searchInput) || species.pokemon.includes(this.state.searchInput);
+    // })
 
       return (
         <div className="App">
           <Header></Header>
-          <div id="input"><input type="text" className="form" onChange={this.handleChange}></input></div>
-          <PokeList pokedex={pokemon} />
+          <div id="input"><input type="text" className="form" onChange={this.handleChange}></input><button onClick={this.handleSearchInput}>Submit</button></div>
+          <PokeList pokedex={this.state.pokedex} />
         </div>
       );
   }

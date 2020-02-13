@@ -21,8 +21,8 @@ export default class Pokemon extends Component {
                 <tr>
                     <th>Def</th>
                     <th>Hp</th>
-                    <th>Sp atk</th>
-                    <th>Sp def</th>
+                    <th>Sp Atk</th>
+                    <th>Sp Def</th>
                     <th>Speed</th>
                 </tr>
             </thead>

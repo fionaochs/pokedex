@@ -135,6 +135,8 @@ input{
     margin-top: 25px;
     margin-bottom: -10px;
     background-color: rgb(174, 59, 80);
+    color: aliceblue;
+    font-weight: bold;
 }
 
 ul {
