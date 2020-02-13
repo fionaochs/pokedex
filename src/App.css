@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Heebo|Oswald');
+
+body {
+    font-family: 'Heebo', "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    background: rgb(202, 28, 31);
+    margin: 0;
+    line-height: 1.5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    font-size: 2em;
+    color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3{
+    font-family: 'Oswald';
+    font-weight: bold;
+    color: aliceblue;
+}
+* {
+    box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+header, main {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(202, 52, 52);
+    border-bottom: 1px solid rgb(128, 0, 6);
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 0 20px;
+    flex-grow: 1;
+}
+
+.options {
+    padding: 10px 0;
+}
+
+section {
+    margin: 20px auto;
+    width: 90%;
+    min-width: 650px;
+}
+
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.horned-types{
+  /* display: flex; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.pokemons li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 200px;
+    width: 150px;
+    min-width: 200px;
+    border: 1px solid rgb(247, 163, 175);
+    background-color: rgb(174, 59, 80);
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemons li h2 {
+    font-size: 1.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokemons li .creature-type {
+    font-size: .8em;
+    color: rgb(113, 16, 16);
+}
+
+.pokemons li .year {
+    font-size: .8em;
+}
+
+#image-container {
+    height: 150px;
+    width: 150px;
+}
+
+#image-container img {
+    height: 90%;
+    object-fit: contain;
+    width: 90%;
+}
+
+.creature-type-filter {
+    height: 48px;
+    width: 150px;
+    font-size: 1.2em;
 }
