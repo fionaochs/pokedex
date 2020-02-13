@@ -5,7 +5,7 @@ export default class Header extends Component {
       return <header>
           <div>
               <h1>
-                  Gotta Catch em all
+                  Gotta Catch Em All
               </h1>
           </div>
 

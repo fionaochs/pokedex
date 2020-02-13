@@ -16,6 +16,14 @@ h1, h2, h3{
     font-family: 'Oswald';
     font-weight: bold;
     color: aliceblue;
+    margin-top: -5px;
+}
+p{
+    font-family: 'Oswald';
+    font-weight: bold;
+    margin: 0px;
+    color: aliceblue;
+    font-size: 15px;
 }
 * {
     box-sizing: border-box;
@@ -65,7 +73,7 @@ section {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    height: 200px;
+    height: 280px;
     width: 150px;
     min-width: 200px;
     border: 1px solid rgb(247, 163, 175);
@@ -74,14 +82,14 @@ section {
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 0px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .pokemons li h2 {
     font-size: 1.5em;
 }
 
-.pokemons li .creature-type {
+.pokemons li .pokemon-type {
     font-size: .8em;
     color: rgb(113, 16, 16);
 }
@@ -99,9 +107,10 @@ section {
     height: 90%;
     object-fit: contain;
     width: 90%;
+    margin-bottom: -10px;
 }
 
-.creature-type-filter {
+.pokemon-type-filter {
     height: 48px;
     width: 150px;
     font-size: 1.2em;

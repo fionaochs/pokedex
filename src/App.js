@@ -9,6 +9,7 @@ class App extends Component {
     selected: null,
     pokedex: []
   }
+  //initialize state with empty array for API
 
   handleChange = e => {
     this.setState({selected: e.target.value});
@@ -16,8 +17,8 @@ class App extends Component {
   async componentDidMount() {
     const data = await request.get('https://alchemy-pokedex.herokuapp.com/api/pokedex');
   
-
     this.setState({pokedex: data.body.results});
+    //set data to API call
 }
   render() {
 
@@ -26,10 +27,7 @@ class App extends Component {
           <Header></Header>
           <PokeList pokedex={this.state.pokedex} />
         </div>
-    
-    
       );
   }
-
 }
 export default App;
