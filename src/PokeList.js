@@ -5,15 +5,6 @@ import PokeItem from './PokeItem.js';
 export default class PokeList extends Component {
     render () {
 
-        // pokedex.filter(Pokemon => {
-        //     if (!this.state.keyword) return true;
-        //     return Pokemon.keyword.includes(this.state.keyword);
-        //   })
-        //   .map(passedPokemon => 
-        //     <PokeItem
-        //     pokemon={passedPokemon} 
-        //     />)
-
      return (
         <section className="options">
             <section className="list-section">
