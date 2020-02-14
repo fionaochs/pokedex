@@ -16,11 +16,3 @@ export default class PokeList extends Component {
      );  
     }
 }
-
-
-{/* <PokeItem pokemon={passedPokemon} />
-same as passing pokemon item into and creating an item named after that pokemon
-function PokeItem(pokemon) {
-    stuff
-}
-PokeItem(pokemon) */}

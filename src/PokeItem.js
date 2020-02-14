@@ -13,7 +13,6 @@ export default class Pokemon extends Component {
             </div>
             <div id="abilities">
                 <p>Type: {this.props.pokemon.type_1}</p>
-                {/* <p>Defense Score: {this.props.pokemon.defense}</p> */}
                 <p>Defense: {this.props.pokemon.type_2}</p>
             </div>
             <table>
