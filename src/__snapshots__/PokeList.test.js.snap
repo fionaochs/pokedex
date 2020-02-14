@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PokeList.js correctly 1`] = `
+<section
+  className="options"
+>
+  <section
+    className="list-section"
+  >
+    <ul
+      className="pokemons"
+    />
+  </section>
+</section>
+`;
