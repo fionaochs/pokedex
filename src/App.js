@@ -9,8 +9,7 @@ import { getPokemon } from './services/pokedex-api.js';
 class App extends Component {
   state = {
     pokedex: [],
-    pokemon: null,
-    searchInput: []
+    count: 0
   }
 
   async loadPokemon() {
@@ -21,11 +20,10 @@ class App extends Component {
     this.setState({ pokemon, count });
   }
   
-  handleChange = e => {
-    this.setState({searchInput: e.target.value});
-  }
   async componentDidMount() {
     window.location.hash = 'sort=id'
+    //#sort=id&pokemon=onix&page=1
+
     await this.loadPokemon();
 
     window.addEventListener("hashchange", async () => {
@@ -39,8 +37,8 @@ class App extends Component {
 
       return (
         <div className="App">
-          <Header></Header>
-          <Search handleSearchInputCallback={this.handleChange} onChange={this.handleChange}/>
+          <Header />
+          <Search />
           <PokeList pokedex={pokedex} />
           <Paging count={count} />
         </div>

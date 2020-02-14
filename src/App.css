@@ -142,4 +142,6 @@ input{
 ul {
     padding: 0;
 }
-
+label {
+    color: aliceblue;
+}
